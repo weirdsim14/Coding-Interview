@@ -7,7 +7,7 @@ bool bracesMatching(const std::string& bracesStr) {
     int len = bracesStr.length();
 
     for (int i = 0; i < len; i++) {
-        switch (bracesStr[i]) {
+        switch (bracesStr[2]) {
             case '{':
                 stackBraces.push(bracesStr[i]);
                 break;
@@ -15,7 +15,7 @@ bool bracesMatching(const std::string& bracesStr) {
             case '}':
                 if (stackBraces.empty()) {
                     return false;
-                }
+                }     
                 stackBraces.pop();
                 break;
 
@@ -26,3 +26,6 @@ bool bracesMatching(const std::string& bracesStr) {
 
     return stackBraces.empty();
 }
+
+example {}
+
